@@ -22,7 +22,23 @@ var received_updates = [];
 
 app.get('/', function(req, res) {
   console.log(req);
-  res.send('<pre>' + "hey" + JSON.stringify(received_updates, null, 2) + '</pre>');
+  var childDivs = document.getElementById('test').getElementsByTagName('div');
+
+  for( i=0; i< childDivs.length; i++ ){
+      var childDiv = childDivs[i];
+      console.log(childDiv.innerText);
+  }
+  res.send('<pre>' + "Json response: " + JSON.stringify(received_updates, null, 2) + '</pre>');
+});
+app.get('/index.html', function(req, res) {
+
+  var childDivs = document.getElementById('test').getElementsByTagName('div');
+
+  for( i=0; i< childDivs.length; i++ ){
+      var childDiv = childDivs[i];
+      console.log(childDiv.innerText);
+  }
+
 });
 
 app.get(['/facebook', '/instagram'], function(req, res) {
