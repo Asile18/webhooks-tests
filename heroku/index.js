@@ -30,16 +30,7 @@ app.get('/', function(req, res) {
   }
   res.send('<pre>' + "Json response: " + JSON.stringify(received_updates, null, 2) + '</pre>');
 });
-app.get('/index.html', function(req, res) {
 
-  var childDivs = document.getElementById('test').getElementsByTagName('div');
-
-  for( i=0; i< childDivs.length; i++ ){
-      var childDiv = childDivs[i];
-      console.log(childDiv.innerText);
-  }
-
-});
 
 app.get(['/facebook', '/instagram'], function(req, res) {
   if (
