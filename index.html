@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webhook</title>
+</head>
+<body>
+    <div id="test">
+        <div id="test-1">
+            object
+        </div>
+        <div id="test-2">
+            field
+        </div>
+        <div id="test-3">
+            value
+        </div>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>
+<script>
+    var childDivs = document.getElementById('test').getElementsByTagName('div');
+
+    for( i=0; i< childDivs.length; i++ ){
+        var childDiv = childDivs[i];
+        console.log(childDiv.innerText);
+    }
+
+</script>
