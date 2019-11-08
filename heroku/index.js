@@ -22,13 +22,8 @@ var received_updates = [];
 
 app.get('/', function(req, res) {
   console.log(req);
-  var childDivs = document.getElementById('test').getElementsByTagName('div');
+  res.send('<pre>' + JSON.stringify(received_updates, null, 2) + '</pre>');
 
-  for( i=0; i< childDivs.length; i++ ){
-      var childDiv = childDivs[i];
-      console.log(childDiv.innerText);
-  }
-  res.send('<pre>' + "Json response: " + JSON.stringify(received_updates, null, 2) + '</pre>');
 });
 
 
